@@ -1,0 +1,47 @@
+<html>
+    <head>
+
+        <title>Muestra oculta</title>
+
+    </head>
+
+    <body>
+
+        <!--Al hace llamado a la función solo tienes que idicar el nombre del DIV entre parentesis -->
+        <script language='JavaScript'>
+            function muestra_oculta(){
+                var sz = document.forms['Parametros'].elements['Rdb_tipo_dato'];
+                for (var i=0, len=sz.length; i<len; i++) {
+                    sz[i].onclick = function() {
+                        if (this.value == 'Caracter') {
+                            var el = document.getElementById('Ficha_tecnica');
+                            el.style.display = (el.style.display == 'none') ? 'block' : 'block'; 
+                        }else if (this.value == 'Numero'){
+                            var el = document.getElementById('Ficha_tecnica');
+                            el.style.display = (el.style.display == 'block') ? 'none' : 'none';
+                            this.form.total.value = '0.0';
+                        }
+                    };
+                }
+            }
+            window.onload = function(){
+                muestra_oculta('ficha_tecnica');
+            }
+        </script>
+
+        <form action="#" method="post" id="Parametros">
+            <fieldset>
+                <legend> Order Pizza</legend>
+                <p>
+                    <label><input type="radio" name="Rdb_tipo_dato" value="Caracter" /> Caracter</label>
+                    <label><input type="radio" name="Rdb_tipo_dato" value="Numero" checked="checked" /> Numero</label>
+                </p>
+            </fieldset>
+            <div style="display: none"  id="Ficha_tecnica">
+                <p>Este contenido tiene que mostrarse con el link</p>
+            </div>
+        </form>
+
+
+    </body>
+</html>

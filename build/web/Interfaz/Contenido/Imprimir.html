@@ -1,0 +1,97 @@
+<html>
+<head>
+<style type="text/css" media="print,screen">
+.hideMe{
+display:block;
+}
+
+.PrintClass {
+display:block;
+
+}
+.NoPrintClass{
+display:block;
+}
+</style>
+<script type="text/javascript" src="http://jqueryjs.googlecode.com/files/jquery-1.3.1.min.js"> </script>
+<script type="text/javascript">
+    function PrintElem(elem)
+    {
+        Popup($('<div/>').append($(elem).clone()).html());
+    }
+    function Popup(data)
+    {
+        var mywindow;
+        mywindow = window.open('', 'mydiv','height=400,width=600,scrollbars=yes','');
+        mywindow.document.write('<html><head><title>my div</title>');
+        mywindow.document.write('<style type="text/css" media="print,screen">.hideMe{display:none;}.NoPrintClass{display:none;}</style>');
+        mywindow.document.write('</head><body>');
+        mywindow.document.write('drop down selected value in parent: '+mywindow.opener.document.getElementById('testSelect').options[mywindow.opener.document.getElementById('testSelect').selectedIndex].text+'<br/>');
+        mywindow.document.write('contentStarts<br/>');
+        mywindow.document.write('  using jquery:  '+data);
+        mywindow.document.write(' using javascript: '+mywindow.opener.document.getElementById('mydiv').innerHTML);
+        mywindow.document.write('<br/>contentEnds');
+        mywindow.document.write('<br/>');
+        mywindow.document.write('</body></html>');
+        mywindow.document.focus();
+        mywindow.document.close();
+        mywindow.print();
+        return true;
+    }
+
+   </script>
+</head>
+
+
+<body>
+
+This is not be printed<br/>
+<div id="mydiv">This content is to be printed<br/>
+<div class="hideMe"><select id="testSelect">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+</div>
+    <form action="demo_form.asp">
+  First name: <input type="text" name="fname" autofocus><br>
+  Last name: <input type="text" name="lname"><br>
+  <input type="submit">
+</form>
+<br/>
+This will also be printed
+<br/>print  bgcolor
+<div style="background:red;" class="PrintClass">print</div><br/>
+<div style="background:green;" class="PrintClass">print</div><br/>
+<div style="background:red;" class="NoPrintClass">not to print</div><br/>
+<div style="background:green;" class="NoPrintClass">not to print</div><br/>
+<div style="background:red;" class="PrintClass">print</div><br/>
+<div style="background:green;" class="PrintClass">print</div><br/>
+<br/> print image
+<div style="background-image:url('red.png');background-repeat:repeat;" class="PrintClass">print</div><br/>
+<div style="background-image:url('green.png');background-repeat:repeat;" class="PrintClass">print</div><br/>
+<div style="background-image:url('red.png');background-repeat:repeat;" class="NoPrintClass">not to print</div><br/>
+<div style="background-image:url('green.png');background-repeat:repeat;" class="NoPrintClass">not to print</div><br/>
+<div style="background-image:url('red.png');background-repeat:repeat;" class="PrintClass">print</div><br/>
+<div style="background-image:url('green.png');background-repeat:repeat;" class="PrintClass">print</div><br/>
+<text>some text
+<div style="position:relative;">
+<img src="green.png" width="100px" height="100px" value="abcd">dfads
+<div style="postion:absolute">wpeoriu</div>
+</div>
+</img>
+</text>
+
+</div>
+
+<div>This will not be printed.</div>
+<br/>
+<div id="anotherdiv">Nor will this.</div>
+
+<input type="button" value="Print Div" onclick="PrintElem('mydiv')" />
+
+
+
+</body>
+
+</html>

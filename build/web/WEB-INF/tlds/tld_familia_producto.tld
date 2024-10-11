@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>tld_familia_producto</short-name>
+    <uri>/WEB-INF/tlds/tld_familia_defecto</uri>
+    <tag>
+        <name>MuestraFamilia</name>
+        <tag-class>Tags.Tag_FamiliaProducto</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+    <tag>
+        <name>MuestraCatalogo</name>
+        <tag-class>Tags.Consulta_catalogo</tag-class>
+        <body-content>scriptless</body-content>
+    </tag>
+</taglib>

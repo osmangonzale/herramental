@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+        <title>Web Store - Products</title>
+        <!-- CSS Principal -->
+        <link href="Css/CSS_Principal.css" rel="stylesheet" type="text/css" />
+        <!-- CSS Menu -->
+        <link rel="stylesheet" type="text/css" href="Css/CSS_Menu.css" />
+        <!-- JQuery desplega menu -->
+        <script type="text/javascript" src="Scripts/JS_Menu_Min.js"></script>
+        <!-- JQuery desplega menu -->
+        <script type="text/javascript" src="Scripts/JS_Menu.js"></script>
+        <!-- JavaScript desplega menu -->
+        <script type="text/javascript">
+            ddsmoothmenu.init({
+                mainmenuid: "templatemo_menu", //menu DIV id
+                orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+                classname: 'ddsmoothmenu', //class added to menu's outer DIV
+                //customtheme: ["#1c5a80", "#18374a"],
+                contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+            })
+        </script>
+    </head>
+
+    <body id="subpage">
+
+        <div id="templatemo_wrapper">
+            <div id="templatemo_header">
+                <div id="site_title"><h1><a href="http://www.templatemo.com" rel="nofollow">Free CSS Templates</a></h1></div>
+            </div> <!-- END of header -->
+
+            <div id="templatemo_menu" class="ddsmoothmenu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html" class="selected">Products</a>
+                        <ul>
+                            <li><a href="#">Sub menu 1</a></li>
+                            <li><a href="#">Sub menu 2</a></li>
+                            <li><a href="#">Sub menu 3</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">About</a>
+                        <ul>
+                            <li><a href="#">Sub menu 1</a></li>
+                            <li><a href="#">Sub menu 2</a></li>
+                            <li><a href="#">Sub menu 3</a></li>
+                            <li><a href="#">Sub menu 4</a></li>
+                            <li><a href="#">Sub menu 5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">FAQs</a></li>
+                    <li><a href="">Checkout</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+                <br style="clear: left" />
+            </div> <!-- end of templatemo_menu -->
+
+            <div id="sidebar">
+                <h3>Categories</h3>
+                <ul class="sidebar_menu">
+                    <li><a href="#">Aenean et dolor diam</a></li>
+                    <li><a href="#">Aenean pulvinar</a></li>
+                    <li><a href="#">Cras bibendum auctor</a></li>
+                    <li><a href="#">Donec sodales bibendum</a></li>
+                    <li><a href="#">Etiam in tellus</a></li>
+                    <li><a href="#">Hendrerit justo</a></li>
+                    <li><a href="#">Integer interdum</a></li>
+                    <li><a href="#">Maecenas a diam</a></li>
+                    <li><a href="#">Nullam in semper</a></li>
+                    <li><a href="#">Posuere in commodo</a></li>
+                    <li><a href="#">Tincidunt leo</a></li>
+                    <li><a href="#">Vestibulum blandit</a></li>
+                </ul>
+                <h3><a class="sidebar_title" href="http://es.mystockphoto.com" title="fotos gratis" rel="nofollow" target="_blank">Newsletter</a></h3>
+                <p>Praesent aliquam mi id tellus pretium pulvinar in vel ligula.</p>
+                <div id="newsletter">
+                    <form action="#" method="get">
+                        <input type="text" name="email_newsletter" id="email_newsletter" placeholder="Enviar" />
+                        <input type="submit" name="subscribe" value="Subscribe" />
+                    </form>
+                    <div class="cleaner"></div>
+                </div>
+            </div> <!-- END of sidebar -->
+
+            <div id="content">
+                <script>
+                    function autotab(current,to){
+                        if (current.getAttribute && current.value.length==current.getAttribute("maxlength") || current.value.length==current.getAttribute("minlength")) {
+                            to.focus()
+                        }
+                    }
+                </script>
+
+                <b>Enter your phone number ex (1-888-555-1234):</b>
+                <form name="telephone">
+                    <input type="text" name="phone0" onKeyup="autotab(this, document.telephone.phone1)" maxlength=5 minlength=4  />
+                    <input type="text" name="phone1" onKeyup="autotab(this, document.telephone.phone2)" maxlength=5 minlength=4 />
+                    <input type="text" name="phone2" onKeyup="autotab(this, document.telephone.phone3)" maxlength=5 minlength=4 />
+                    <input type="text" name="phone3" onKeyup="autotab(this, document.telephone.phone0)" maxlength=5 minlength=4 />
+                </form>
+            </div> <!-- END of content -->
+            <div class="cleaner"></div>
+        </div>
+    </body>
+</html>

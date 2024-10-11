@@ -1,0 +1,80 @@
+.tab-content {
+    /*border: 1px solid #CAA427;*/
+    background: white; /*#FFF3B3;*/
+    color: black;
+    padding-top: 1.5em;
+}
+
+
+.tab-header {
+    /*position: relative;*/
+    height: 2em;
+    width: 50em; /* a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.tab-header ul.tab-list {
+    margin: 0;
+    padding: 0;
+    /*position: absolute;*/
+    bottom: -1px;
+    width:900px;
+    /*    width: 50em;  a width is required for Opera, older Mozilla browsers, and Konqueror browsers */
+}
+
+.tab-header ul.tab-list li  {
+    display: inline;
+    list-style: none;
+    margin: 0;
+}
+
+.tab-header ul.tab-list a,.tab-header ul.tab-list span,.tab-header ul.tab-list a.tab-active {
+    width: 11em;
+    display: block;
+    float: left;
+    padding: 4px 0;
+    margin: 1px 2px 0 0;
+    text-align: center;
+    font-family: tahoma, verdana, sans-serif;
+    font-size: 110%;
+    text-decoration: none;
+    color: #333;
+}
+
+.tab-header ul.tab-list span,.tab-header ul.tab-list a.tab-active,.tab-header ul.tab-list a.tab-active:hover {
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    border-bottom: none;
+    background: #fff;
+    color: #CAA427;
+    padding-bottom: 6px;
+    margin-top: 0;
+}
+
+/* a link in a background tab */
+.tab-header ul.tab-list a {
+    background: #292929;
+    border-color: #292929;
+    color: #fff;
+    border-top: 1px solid #292929;
+    border-left: 1px solid #292929;
+    border-right: 1px solid #292929;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+}
+
+/* hover on a background tab */
+.tab-header ul.tab-list a:hover {
+    margin-top: 0;
+    border-color: #CAA427;
+    background: #CAA427;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+.tab  /* the heading that became the li */
+{
+    display: none;
+}
